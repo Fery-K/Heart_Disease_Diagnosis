@@ -3,4 +3,4 @@ scikit-learn
 streamlit
 altair
 matplotlib
-streamlit_option_menu
+streamlit-option-menu
