@@ -85,7 +85,7 @@ def menu_analysis():
                 alt.X('target:N', title='').axis(labelAngle=0),
                 alt.Y('count()', title=''),
                 alt.Color('target:N', legend=None)
-            ).properties(width=600, height=460)
+            ).properties(width=500, height=460)
             st.altair_chart(plot1, use_container_width=False)
         with col2:
             plot2 = alt.Chart(df, title='2. Proporsi Pria dan Wanita').mark_bar().encode(
