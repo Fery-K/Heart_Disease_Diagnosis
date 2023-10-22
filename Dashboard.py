@@ -76,8 +76,7 @@ def menu_analysis():
         st.markdown('''
         1. Jumlah Penderita penyakit jantung  
         2. Proporsi pasien pria dan wanita yang mengalami penyakit jantung  
-        3. Usia rata rata pasien yang terkena penyakit jantung  
-        4. Korelasi penyakit jantung terhadap tiap variabel yang ada pada dataset  
+        3. Usia rata rata pasien yang terkena penyakit jantung
         ''')
         st.divider()
         col1, col2 = st.columns(2)
