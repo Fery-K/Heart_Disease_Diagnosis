@@ -15,7 +15,7 @@ X = df[['cp', 'thalach', 'slope', 'oldpeak', 'exang', 'ca', 'thal', 'sex', 'age'
 y = df['target']
 
 # IMPORT MODEL
-with open('https://github.com/Fery-K/Heart_Disease_Diagnosis/raw/master/model.pkl', 'rb') as file:
+with open('https://raw.githubusercontent.com/Fery-K/Heart_Disease_Diagnosis/raw/master/model.pkl', 'rb') as file:
     model = pickle.load(file)
     model = model.best_estimator_
 
