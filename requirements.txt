@@ -3,5 +3,4 @@ scikit-learn
 streamlit
 altair
 matplotlib
-numpy
 streamlit-option-menu
