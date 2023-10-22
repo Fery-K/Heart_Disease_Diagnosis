@@ -5,3 +5,5 @@ altair
 matplotlib
 numpy
 streamlit-option-menu
+joblib
+requests

@@ -1,7 +1,9 @@
 # IMPORT LIBRARIES
 import pandas as pd
 import time
-import pickle
+import joblib
+import requests
+from io import BytesIO
 import streamlit as st
 import altair as alt
 from streamlit import config as st_config
@@ -15,9 +17,8 @@ X = df[['cp', 'thalach', 'slope', 'oldpeak', 'exang', 'ca', 'thal', 'sex', 'age'
 y = df['target']
 
 # IMPORT MODEL
-with open('https://raw.githubusercontent.com/Fery-K/Heart_Disease_Diagnosis/master/model.pkl', 'rb') as file:
-    model = pickle.load(file)
-    model = model.best_estimator_
+model = joblib.load(BytesIO(requests.get('https://raw.githubusercontent.com/Fery-K/Heart_Disease_Diagnosis/master/model.pkl').content))
+model = model.best_estimator_
 
 
 # Set page general info
