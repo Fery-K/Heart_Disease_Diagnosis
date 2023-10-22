@@ -11,12 +11,12 @@ import matplotlib.pyplot as plt
 from sklearn.preprocessing import StandardScaler, LabelEncoder
 
 # IMPORT DATASETS
-df = pd.read_csv(r'Datasets/heartdisease_cleansed.csv')
+df = pd.read_csv('https://raw.githubusercontent.com/Fery-K/Heart_Disease_Diagnosis/master/Datasets/heartdisease_cleansed.csv')
 X = df[['cp', 'thalach', 'slope', 'oldpeak', 'exang', 'ca', 'thal', 'sex', 'age']]
 y = df['target']
 
 # IMPORT MODEL
-with open("model.pkl", "rb") as file:
+with open('https://github.com/Fery-K/Heart_Disease_Diagnosis/raw/master/model.pkl', 'rb') as file:
     model = pickle.load(file)
     model = model.best_estimator_
 
