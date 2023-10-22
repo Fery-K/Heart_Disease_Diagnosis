@@ -6,7 +6,6 @@ import streamlit as st
 import altair as alt
 from streamlit import config as st_config
 from streamlit_option_menu import option_menu
-import seaborn as sns
 import matplotlib.pyplot as plt
 from sklearn.preprocessing import StandardScaler, LabelEncoder
 
