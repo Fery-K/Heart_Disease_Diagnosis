@@ -14,7 +14,7 @@ X = df[['cp', 'thalach', 'slope', 'oldpeak', 'exang', 'ca', 'thal', 'sex', 'age'
 y = df['target']
 
 # IMPORT MODEL
-with open('model.joblib', 'rb') as file:
+with open('./model.joblib', 'rb') as file:
     model = joblib.load(file)
 model = model.best_estimator_
 
