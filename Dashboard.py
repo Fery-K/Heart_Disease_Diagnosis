@@ -1,7 +1,7 @@
 # IMPORT LIBRARIES
 import pandas as pd
 import time
-import pickle
+import joblib
 import streamlit as st
 import altair as alt
 from streamlit import config as st_config
@@ -14,8 +14,8 @@ X = df[['cp', 'thalach', 'slope', 'oldpeak', 'exang', 'ca', 'thal', 'sex', 'age'
 y = df['target']
 
 # IMPORT MODEL
-with open('model.pkl', 'rb') as file:
-    model = pickle.load(file)
+with open('model.joblib', 'rb') as file:
+    model = joblib.load(file)
 model = model.best_estimator_
 
 
