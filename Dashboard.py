@@ -16,7 +16,7 @@ y = df['target']
 
 # IMPORT MODEL
 with open('./model.pkl', 'rb') as file:
-    model = pickle.load(file)
+    model = joblib.load(file)
 model = model.best_estimator_
 
 
