@@ -2,13 +2,10 @@
 import pandas as pd
 import time
 import joblib
-import requests
-from io import BytesIO
 import streamlit as st
 import altair as alt
 from streamlit import config as st_config
 from streamlit_option_menu import option_menu
-import matplotlib.pyplot as plt
 from sklearn.preprocessing import StandardScaler, LabelEncoder
 
 # IMPORT DATASETS
@@ -17,7 +14,8 @@ X = df[['cp', 'thalach', 'slope', 'oldpeak', 'exang', 'ca', 'thal', 'sex', 'age'
 y = df['target']
 
 # IMPORT MODEL
-model = joblib.load(BytesIO(requests.get('https://raw.githubusercontent.com/Fery-K/Heart_Disease_Diagnosis/master/model.pkl').content))
+with open('model.pkl', 'rb') as file:
+    model = joblib.load(file)
 model = model.best_estimator_
 
 
